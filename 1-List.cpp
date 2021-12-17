@@ -30,6 +30,12 @@ class List {
 
             cout << list[end] << endl;
         }
+    
+        void insert(int num) {
+
+            list[end + 1] = num;
+            end++;
+        }
 
         void insert(int num, int index) {
 
@@ -82,6 +88,14 @@ int main()
    
     cout << "List content after \"Removing\"..." << endl;
     l1.remove(2);
+    l1.print();
+    
+    cout << "List content after \"Inserting\"..." << endl;
+    l1.insert(11);
+    l1.print();
+
+    cout << "List content after \"Removing\"..." << endl;
+    l1.remove(10);
     l1.print();
 }
 
